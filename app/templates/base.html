@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>
+        {% block title %}The Adventurer's Codex{% endblock %}
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navigation">
+            <a href="{{ url_for('main.index') }}" class="brand">
+                The Adventurer's Codex
+            </a>
+            <span class="nav-label">Campaign Manager</span>
+        </nav>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>The Adventurer's Codex</p>
+    </footer>
+</body>
+</html>
